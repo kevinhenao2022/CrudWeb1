@@ -8,7 +8,7 @@ $con = $db->conectar();
 $id = $_GET['id'];
 
 $query = $con->prepare("DELETE FROM productos WHERE id=?");
-$query ->execute(['id']);
+$query->execute(['$id']);
 $eliminado = $query->rowCount();
 
 ?>
@@ -20,13 +20,17 @@ $eliminado = $query->rowCount();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELIMINAR</title>
-    <link rel="icon" href="img/418486.png">
+    <link rel="icon" href="img/407826.png">
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/estilos.css">
     <script src="public/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="py-3">
     <main class="container contenedor">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.php">
+        <img src="img/418486.png" width="30" height="30" class="d-inline-block align-top" alt=""> ALMACEN INICIO</a>
+    </nav>
         <div class="p-3 rounder">
             <div class="row">
                 <div class="col">
